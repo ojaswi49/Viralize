@@ -94,3 +94,9 @@ body {
 .Leaderboard button:hover {
   background-color: #218838;
 }
+
+.pgNumber {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
