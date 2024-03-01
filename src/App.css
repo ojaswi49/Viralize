@@ -1,43 +1,96 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: between;
-  align-items:end;
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
   padding: 20px;
 }
 
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .form {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.form form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form input[type='text'] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 120px);
+}
+
+.form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form button:hover {
+  background-color: #0056b3;
 }
 
 .userDetails {
-  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+}
+
+.userDetails h2 {
+  margin: 10px 0;
 }
 
 .Leaderboard {
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: white;
-  width: 50%;
-  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .Leaderboard h1 {
-  text-align: center;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
 }
 
-ul {
-  list-style-type: none;
+.Leaderboard ul {
+  list-style: none;
   padding: 0;
 }
 
-li {
-  margin-bottom: 10px;
+.Leaderboard li {
+  background-color: #f9f9f9;
+  border: 1px solid #eaeaea;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
 }
 
-button {
-  margin-right: 10px;
+.Leaderboard button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.Leaderboard button:hover {
+  background-color: #218838;
 }
