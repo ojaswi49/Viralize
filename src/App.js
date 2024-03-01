@@ -8,6 +8,7 @@ function TopPlayers() {
     const [username, setUsername] = useState("");
     const [userDetails, setUserDetails] = useState({});
     const [pageNumber, setPageNumber] = useState(1);
+    const [state,setState] = useState("");
     const playersPerPage = 5;
 
     const getDetails = async (e) => {
@@ -17,9 +18,14 @@ function TopPlayers() {
             let date = new Date(data.createdAt);
             let formattedDate = date.toLocaleString();
             const details = { username: data.username, timeStamp: formattedDate, count: data.count };
+            setState("");
             setUserDetails(details);
-        } catch (err) {
-            console.log(err);
+        } catch (e) {
+            // console.log(4);
+            if(e.response.status === 404){
+              // console.log(err);
+              setState("User not Found");
+            }
         }
     };
 
@@ -63,6 +69,7 @@ function TopPlayers() {
                         <input type='text' onChange={(e) => setUsername(e.target.value)} />
                     </span>
                     <button type='submit'>Submit</button>
+                  <label className='state'>{state}</label>
                 </form>
                 {userDetails.username && (
                     <div className='userDetails'>
